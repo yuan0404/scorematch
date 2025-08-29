@@ -1,0 +1,219 @@
+body {
+    font-family: sans-serif;
+    padding: 2em;
+    margin: auto;
+    background: #fefefe;
+    max-width: 1100px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+fieldset {
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    padding: 1em;
+    margin: auto;
+    margin-top: 1em;
+    background-color: #ffffff;
+    max-width: 700px;
+}
+
+legend {
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0 0.5em;
+    color: #34495e;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.row label {
+    width: 45%;
+    margin-left: 2%;
+    margin-right: 3%;
+    margin-bottom: 1em;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 0.5em;
+    margin-top: 0.5em;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+form button {
+    display: block;
+    margin: 1em auto;
+    padding: 0.7em 1.2em;
+    background-color: #48627c;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #34495e;
+}
+
+#resultArea {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+}
+
+#detailsContainer {
+    flex: 1;
+    min-width: 220px;
+    text-align: left;
+}
+
+summary {
+    font-weight: bold;
+    font-size: 1.2em;
+    margin-top: 1em;
+    text-align: left;
+    color: #34495e;
+}
+
+.scoreList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+}
+
+.schoolCheckboxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em 1em;
+    margin-top: 0.5em;
+    max-height: 425px;
+    overflow-y: auto;
+}
+
+.schoolCheckboxes label {
+    display: flex;
+    white-space: nowrap;
+    cursor: pointer;
+    padding-left: 1.2em;
+}
+
+#tableContainer {
+    flex: 5;
+    min-width: 500px;
+}
+
+#tableTabs {
+    display: flex;
+    gap: 0.2rem;
+}
+
+#tableTabs button {
+    margin-top: 1em;
+    padding: 0.5em 1em;
+    font-size: 1em;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    cursor: pointer;
+}
+
+#tableTabs button.active {
+    background-color: #2d6b85;
+    color: #ffffff;
+}
+
+#tableTabs button:last-child {
+    margin-left: auto;
+    background-color: #2d6b85;
+    color: #ffffff;
+}
+
+#tableTabs button:last-child:hover {
+    margin-left: auto;
+    background-color: #1a4252;
+    color: #ffffff;
+}
+
+#track,
+#pass,
+#fail {
+    max-height: 470px;
+    overflow-y: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+th {
+    border: 1px solid #dddddd;
+    background-color: #2d6b85;
+    color: #ffffff;
+    padding: 0.5em;
+    text-align: center;
+    font-size: 1em;
+    position: sticky;
+    top: 0;
+}
+
+td {
+    border: 1px solid #dddddd;
+    padding: 0.5em;
+    text-align: left;
+}
+
+#trackTable .mainRow td:nth-child(1),
+#trackTable .mainRow td:nth-child(4),
+#trackTable .mainRow td:nth-child(5),
+#passTable .mainRow td:nth-child(1),
+#passTable .mainRow td:nth-child(4),
+#passTable .mainRow td:nth-child(5) {
+    text-align: center;
+}
+
+.heart {
+    font-size: 1rem;
+    transition: color 0.1s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.heart.unliked {
+    color: #dddddd;
+}
+
+.heart.liked {
+    color: #ff0000;
+}
+
+.mainRow {
+    cursor: pointer;
+}
+
+.mainRow:hover {
+    background-color: #eeeeee;
+}
+
+.detailsRow td {
+    background-color: #f9f9f9;
+    padding: 1em;
+    font-size: 0.95em;
+    color: #2d2d2d;
+}

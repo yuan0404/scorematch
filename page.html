@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="趙堉安">
+    <title> 114年分科測驗落點分析 </title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <h1> 114年分科測驗落點分析 </h1>
+
+    <form id="scoreForm">
+        <fieldset>
+            <legend>學測成績（轉換至 60 級分）</legend>
+            <div class="row">
+                <label>國文：<input type="number" name="gs_chinese" min="0" max="60" placeholder="請輸入"></label>
+                <label>英文：<input type="number" name="gs_english" min="0" max="60" placeholder="請輸入"></label>
+                <label>數Ａ：<input type="number" name="gs_mathA" min="0" max="60" placeholder="請輸入"></label>
+                <label>數Ｂ：<input type="number" name="gs_mathB" min="0" max="60" placeholder="請輸入"></label>
+                <label>社會：<input type="number" name="gs_social" min="0" max="60" placeholder="請輸入"></label>
+                <label>自然：<input type="number" name="gs_science" min="0" max="60" placeholder="請輸入"></label>
+                <label>英聽：
+                    <select name="gs_listening">
+                        <option value="">請選擇</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="C">C</option>
+                        <option value="F">F</option>
+                    </select>
+                </label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>分科成績（60級分）</legend>
+            <div class="row">
+                <label>數甲：<input type="number" name="sub_math1" min="0" max="60" placeholder="請輸入"></label>
+                <label>數乙：<input type="number" name="sub_math2" min="0" max="60" placeholder="請輸入"></label>
+                <label>物理：<input type="number" name="sub_physics" min="0" max="60" placeholder="請輸入"></label>
+                <label>化學：<input type="number" name="sub_chemistry" min="0" max="60" placeholder="請輸入"></label>
+                <label>生物：<input type="number" name="sub_biology" min="0" max="60" placeholder="請輸入"></label>
+                <label>歷史：<input type="number" name="sub_history" min="0" max="60" placeholder="請輸入"></label>
+                <label>地理：<input type="number" name="sub_geography" min="0" max="60" placeholder="請輸入"></label>
+                <label>公民：<input type="number" name="sub_civics" min="0" max="60" placeholder="請輸入"></label>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>術科成績（100級分）</legend>
+            <div class="row">
+                <label>音樂：<input type="number" name="pt_music" min="0" max="100" placeholder="請輸入"></label>
+                <label>美術：<input type="number" name="pt_art" min="0" max="100" placeholder="請輸入"></label>
+                <label>體育：<input type="number" name="pt_pe" min="0" max="100" placeholder="請輸入"></label>
+            </div>
+        </fieldset>
+
+        <button type="submit">送出分析</button>
+    </form>
+
+    <div id="resultArea" style="display: none;">
+        <div id="detailsContainer">
+            <div id="scores"></div>
+            <div id="schools"></div>
+        </div>
+
+        <div id="tableContainer">
+            <div id="tableTabs">
+                <button id="showTrack" class="active">追蹤校系</button>
+                <button id="showPass">通過檢定</button>
+                <button id="showFail">未通過檢定</button>
+                <button id="print">下載追蹤校系</button>
+            </div>
+
+            <div id="track">
+                <table id="trackTable">
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                        <col style="width: 40%">
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>志願序</th>
+                            <th>校名</th>
+                            <th>學系</th>
+                            <th>分數</th>
+                            <th>113年錄取分數</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div id="pass" style="display: none;">
+                <table id="passTable">
+                    <colgroup>
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                        <col style="width: 40%">
+                        <col style="width: 10%">
+                        <col style="width: 20%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>追蹤</th>
+                            <th>校名</th>
+                            <th>學系</th>
+                            <th>分數</th>
+                            <th>113年錄取分數</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+
+            <div id="fail" style="display: none;">
+                <table id="failTable">
+                    <colgroup>
+                        <col style="width: 30%">
+                        <col style="width: 70%">
+                    </colgroup>
+                    <thead>
+                        <tr>
+                            <th>校名</th>
+                            <th>學系</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
