@@ -111,7 +111,7 @@ $(document).ready(function () {
                 schools.forEach((school, index) => {
                     const label = document.createElement("label");
                     label.innerHTML = `
-                        <input type="checkbox" class="school-filter" value="${school}" ${index === 0 ? "checked" : ""}> ${school}
+                        <input type="checkbox" class="school-filter" value="${school}" ${index === 0 || index === 5 || index === 6 ? "checked" : ""}> ${school}
                     `;
                     checkboxesContainer.appendChild(label);
                 });
@@ -576,4 +576,5 @@ $(document).ready(function () {
         document.body.removeChild(link);
     });
 });
+
 
